@@ -12,7 +12,7 @@ body {
 
 .container {
     display: grid;
-    grid-row: 1fr 4fr;
+    grid-template-columns: .75fr 4fr;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: 
         "sidebar head"
@@ -21,15 +21,43 @@ body {
 
 .head {
     background-color: whitesmoke;
+    padding: 40px;
     grid-area: head;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head .head-top .search {
+    display: flex;
+    align-items: center;
+}
+
+.head .search button {
+    background-color: transparent;
+    border: none;
+}
+
+.head .head-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head .head-top .icons {
+    display: flex;
+}
+
+.head .head-bottom {
+    display: flex;
+    justify-content: space-between;
 }
 
 .sidebar {
-    background-color: gray;
+    background-color: aqua;
     grid-area: sidebar;
 }
 
 .main-content {
-    background-color: aqua;
+    background-color: gray;
     grid-area: main;
 }
