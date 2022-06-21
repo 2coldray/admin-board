@@ -9,3 +9,27 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+.container {
+    display: grid;
+    grid-row: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+        "sidebar head"
+        "sidebar main";
+}
+
+.head {
+    background-color: whitesmoke;
+    grid-area: head;
+}
+
+.sidebar {
+    background-color: gray;
+    grid-area: sidebar;
+}
+
+.main-content {
+    background-color: aqua;
+    grid-area: main;
+}
